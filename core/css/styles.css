@@ -1,0 +1,320 @@
+/**
+ * @author Lucas Bickel <hairmare@rabe.ch>
+ * @author Jan-Christoph Borchardt, http://jancborchardt.net
+ * @copyright Copyright (c) 2018, ownCloud GmbH
+ * @copyright Copyright (c) 2020, Radio Bern RaBe
+ * @license AGPL-3.0
+ *
+ * This code is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License, version 3,
+ * as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License, version 3,
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ */
+
+body {
+    font-family: Roboto,sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+/* header color */
+/* this is the main brand color */
+#body-user #header,
+#body-settings #header,
+#body-public #header {
+    background-color: #00c9bf;
+}
+#owncloud,
+#header .logo-icon  {
+    font-family: "Fjalla One",sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 36px !important;
+    color: #fff !important;
+    opacity: 1 !important;
+    background-image: unset;
+    padding-left: 0;
+    margin-top: 1px;
+}
+#owncloud {
+    padding: 3px;
+    position: absolute !important;
+}
+@media only screen and (max-width: 967px) {
+    #owncloud {
+        display: none !important;
+    }
+}
+
+.header-appname {
+    font-family: "Fjalla One", sans-serif !important;
+    color: white;
+    font-size: 36px;
+}
+#header .header-appname-container {
+    margin-left: 0 !important;
+    left: 10px !important;
+    opacity: 1 !important;
+}
+.header-appname:hover {
+    color: #0d4b56;
+}
+#apps {
+    width: 340px !important;
+    left: -170px !important;
+}
+@media only screen and (min-width: 768px) {
+    .menutoggle button.burger {
+        display: none !important;
+    }
+    #apps {
+        position: absolute !important;
+    }
+    #apps ul {
+        margin-bottom: 2px;
+    }
+    #navigation div ul {
+        margin-left: 350px !important;
+        width: 150px;
+    }
+}
+
+/* expand icon at top right */
+#expand {
+    color: #ccc !important;
+}
+#expand::after {
+    border-top-color: white !important;
+}
+#expandDisplayName {
+    color: white !important;
+}
+#header .avatardiv {
+    border: 1px solid #6e9d98;
+}
+
+#app-navigation {
+    background-color: #d8efdb;
+}
+#app-navigation .active,
+#app-navigation .nav-trashbin,
+#app-navigation .settings-button,
+#datepickercontainer,
+#app-navigation .datepicker-heading .button {
+    background-color: rgba(0, 0, 0, .09) !important;
+}
+#app-navigation li.divider {
+    border-bottom: 1px solid #6e9d98 !important;
+}
+#app-settings-header {
+    background-color: #d8efdb;
+}
+
+#datepickercontainer {
+    padding-bottom: 5px;
+}
+#datepickercontainer button {
+    border: 1px solid #6e9d98;
+}
+
+#content.app-files::after {
+    background-image: url(/apps-external/rabe/core/img/vogu.png);
+    background-repeat: no-repeat;
+    background-position: 265px calc(100% + 190px);
+    content: "";
+    opacity: 0.15;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+.summary, .summary:focus, .summary:hover, table tr.summary td {
+    opacity: 1;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35px, rgba(255,255,255,0) 55px) !important;
+}
+
+/* log in screen background color */
+/* gradient of the header color and a brighter shade */
+/* can also be a flat color or an image */
+#body-login {
+    background: #00c9bf; /* Old browsers */
+    background: -moz-linear-gradient(top, #947bea 0%, #00c9bf 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#947bea), color-stop(100%,#00c9bf)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #947bea 0%,#00c9bf 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #947bea 0%,#00c9bf 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #947bea 0%,#00c9bf 100%); /* IE10+ */
+    background: linear-gradient(top, #947bea 0%,#00c9bf 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#947bea', endColorstr='#00c9bf',GradientType=0 ); /* IE6-9 */
+}
+
+/* primary action button, use sparingly */
+/* header color as border, brighter shade again, here as background */
+.primary,
+input[type="submit"].primary,
+input[type="button"].primary,
+button.primary,
+.button.primary,
+.primary:active,
+input[type="submit"].primary:active,
+input[type="button"].primary:active,
+button.primary:active,
+.button.primary:active {
+    border-color: #6e9d98;
+    background-color: rgba(6,76,87,.5);
+}
+.primary:active,
+input[type="submit"].primary:active,
+button.primary:active,
+.button.primary:active {
+    background-color: #1d2d44 !important;
+}
+.primary:hover,
+input[type="submit"].primary:hover,
+input[type="button"].primary:hover,
+button.primary:hover,
+.button.primary:hover,
+.primary:focus,
+input[type="submit"].primary:focus,
+input[type="button"].primary:focus,
+button.primary:focus,
+.button.primary:focus {
+    background-color: rgba(6,76,87,.4);
+}
+.primary:active, input[type="submit"].primary:active, input[type="button"].primary:active, button.primary:active, .button.primary:active,
+.primary:disabled, input[type="submit"].primary:disabled, input[type="button"].primary:disabled, button.primary:disabled, .button.primary:disabled,
+.primary:disabled:hover, input[type="submit"].primary:disabled:hover, input[type="button"].primary:disabled:hover, button.primary:disabled:hover, .button.primary:disabled:hover,
+.primary:disabled:focus, input[type="submit"].primary:disabled:focus, input[type="button"].primary:disabled:focus, button.primary:disabled:focus, .button.primary:disabled:focus {
+    background-color: #6e9d98;
+}
+
+/* use logos from theme 
+#header .logo {
+    background-image: url('../img/logo.svg');
+    width: 250px;
+    height: 121px;
+}
+#header .logo-icon {
+    background-image: url('../img/logo-icon.svg');
+    height: 34px;
+    line-height: initial;
+}
+*/
+
+.icon-loading-dark::after, .icon-loading-small-dark::after {
+    border: 1px solid rgba(255, 255, 255, 0.52) !important;
+    border-top-color: rgba(255, 255, 255, 0.52) !important;
+    border-top-color: rgba(6,76,87,.5) !important;
+}
+
+#notification {
+    padding: 0 !important;
+}
+#notification .row {
+    padding: 4px !important;
+}
+#notification,
+#notification .row {
+    background-color: rgba(6,76,87,.5) !important;
+    color: white;
+    opacity: 1 !important;
+}
+
+.notifications-button {
+    top: -45px !important;
+}
+
+/* show Claim */
+#body-user #logo-claim  {
+    display: initial !important;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 17px;
+    padding-left: 170px;
+    height: 45px;
+}
+#body-user #logo-claim a {
+    color: #fff;
+}
+/* hide on small screens */
+@media only screen and (max-width: 767px) {
+    #body-user #logo-claim  {
+        display: none !important;
+    }
+    #searchbox {
+        top: -45px !important;
+    }
+    #header .burger {
+        width: 20px !important;
+        height: 16px !important;
+        margin: 0 10px 0 0 !important;
+        visibility: visible !important;
+        border-top: 4px solid #fff;
+        border-bottom: 4px solid #fff;
+    }
+    #header .burger:hover {
+        border-top: 4px solid #0d4b56;
+        border-bottom: 4px solid #0d4b56;
+    }
+    #header .burger:before {
+        top: calc(50% - 2px);
+        height: 4px;
+    }
+    #header .burger:hover:before {
+        background-color: #0d4b56;
+    }
+}
+
+/* hide client on prefs page */
+#clientsbox {
+    display: none;
+}
+
+/* make calendar datepicker readable on nav */
+.uib-daypicker {
+    background-color: white;
+    border-radius: 4px;
+    margin-left: 5px;
+    margin-right: 8px;
+}
+
+/* remove (admin) from shared studios */
+a.calendar-list-cut-name[title="Studio 2 (admin)"],
+a.calendar-list-cut-name[title="Studio 3 (admin)"],
+a.calendar-list-cut-name[title="Sitzungszimmer / Küche (admin)"] {
+    visibility: hidden;
+}
+a.calendar-list-cut-name[title="Studio 2 (admin)"]:after,
+a.calendar-list-cut-name[title="Studio 3 (admin)"]:after,
+a.calendar-list-cut-name[title="Sitzungszimmer / Küche (admin)"]:after {
+    position: absolute;
+    top: 0;
+    left: 45px;
+    display: block;
+    visibility: visible;
+}
+a.calendar-list-cut-name[title="Studio 2 (admin)"]:after {
+    content: "Studio 2";
+}
+a.calendar-list-cut-name[title="Studio 3 (admin)"]:after {
+    content: "Studio 3";
+}
+a.calendar-list-cut-name[title="Sitzungszimmer / Küche (admin)"]:after {
+    content: "Sitzungszimmer / Küche";
+}
+.calendarShares .publishing {
+    display: none;
+}
+
+/* hide music app */
+li[data-id="music"] {
+    display: none !important;
+}
