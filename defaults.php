@@ -99,7 +99,7 @@ class OC_Theme {
 	 * @return string entity name
 	 */
 	public function getEntity() {
-		return 'Radie Bern RaBe – IT-Reaktion';
+		return 'Radio Bern RaBe – IT-Reaktion';
 	}
 
 	/**
