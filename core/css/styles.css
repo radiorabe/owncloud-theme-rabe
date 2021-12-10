@@ -289,12 +289,14 @@ button.primary:focus,
 /* remove (admin) from shared studios */
 a.calendar-list-cut-name[title="Studio 2 (admin)"],
 a.calendar-list-cut-name[title="Studio 3 (admin)"],
-a.calendar-list-cut-name[title="Sitzungszimmer / Küche (admin)"] {
+a.calendar-list-cut-name[title="Sitzungszimmer / Küche (admin)"],
+a.calendar-list-cut-name[title="Aufenthaltsraum (admin)"] {
     visibility: hidden;
 }
 a.calendar-list-cut-name[title="Studio 2 (admin)"]:after,
 a.calendar-list-cut-name[title="Studio 3 (admin)"]:after,
-a.calendar-list-cut-name[title="Sitzungszimmer / Küche (admin)"]:after {
+a.calendar-list-cut-name[title="Sitzungszimmer / Küche (admin)"]:after,
+a.calendar-list-cut-name[title="Aufenthaltsraum (admin)"]:after {
     position: absolute;
     top: 0;
     left: 45px;
@@ -309,6 +311,9 @@ a.calendar-list-cut-name[title="Studio 3 (admin)"]:after {
 }
 a.calendar-list-cut-name[title="Sitzungszimmer / Küche (admin)"]:after {
     content: "Sitzungszimmer / Küche";
+}
+a.calendar-list-cut-name[title="Aufenthaltsraum (admin)"]:after {
+    content: "Aufenthaltsraum";
 }
 .calendarShares .publishing {
     display: none;
