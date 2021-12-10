@@ -80,7 +80,7 @@ body {
     }
     #navigation div ul {
         margin-left: 350px !important;
-        width: 150px;
+        width: 300px !important;
     }
 }
 
