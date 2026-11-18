@@ -64,23 +64,59 @@ body {
 .header-appname:hover {
     color: #0d4b56;
 }
-#apps {
-    width: 340px !important;
-    left: -170px !important;
-}
 @media only screen and (min-width: 768px) {
     .menutoggle button.burger {
         display: none !important;
     }
+    /* app name in the header is only a label here, the menu is the icon bar */
+    #header .header-appname-container {
+        pointer-events: none;
+    }
+    /* apps as icons in the header bar instead of a dropdown */
+    #navigation {
+        display: block !important; /* core JS hides it inline */
+        top: 0;
+        left: 265px;
+        max-width: none;
+        height: 45px;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
     #apps {
-        position: absolute !important;
+        overflow: visible;
+        white-space: nowrap;
     }
-    #apps ul {
-        margin-bottom: 2px;
+    #navigation a {
+        width: 45px;
+        height: 45px;
+        padding: 12px 0;
     }
-    #navigation div ul {
-        margin-left: 350px !important;
-        width: 300px !important;
+    #navigation .app-icon {
+        max-width: 20px;
+        max-height: 20px;
+    }
+    /* app name as a small popup below the icon on hover/focus */
+    #navigation #apps a span {
+        position: absolute;
+        top: 47px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        padding: 3px 8px;
+        overflow: visible;
+        border-radius: 3px;
+        background-color: rgba(0, 0, 0, .85);
+        opacity: 0;
+        pointer-events: none;
+    }
+    #navigation #apps a:hover span,
+    #navigation #apps a:focus span {
+        opacity: 1;
+    }
+    #navigation .app-loading .icon-loading-dark {
+        top: 6px;
+        left: 6px;
     }
 }
 
@@ -123,7 +159,7 @@ body {
 }
 
 #content.app-files::after {
-    background-image: url(/apps-external/rabe/core/img/vogu.png);
+    background-image: url(../img/vogu.png);
     background-repeat: no-repeat;
     background-position: 265px calc(100% + 190px);
     content: "";
