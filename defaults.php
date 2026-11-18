@@ -31,43 +31,11 @@ class OC_Theme {
 	}
 
 	/**
-	 * Returns the URL where the sync clients are listed
-	 * @return string URL
-	 */
-	public function getSyncClientUrl() {
-		return 'https://owncloud.org/install';
-	}
-
-	/**
-	 * Returns the URL to the App Store for the iOS Client
-	 * @return string URL
-	 */
-	public function getiOSClientUrl() {
-		return 'https://itunes.apple.com/us/app/owncloud/id543672169?mt=8';
-	}
-
-	/**
-	 * Returns the AppId for the App Store for the iOS Client
-	 * @return string AppId
-	 */
-	public function getiTunesAppId() {
-		return '543672169';
-	}
-
-	/**
 	 * Returns the URL to Google Play for the Android Client
 	 * @return string URL
 	 */
 	public function getAndroidClientUrl() {
 		return 'https://play.google.com/store/apps/details?id=com.owncloud.android';
-	}
-
-	/**
-	 * Returns the documentation URL
-	 * @return string URL
-	 */
-	public function getDocBaseUrl() {
-		return 'https://doc.owncloud.org';
 	}
 
 	/**
@@ -144,7 +112,7 @@ class OC_Theme {
 	 */
 	public function getShortFooter() {
 		$l10n = $this->getL10n();
-		$footer = '© 2020 <a href="'.$this->getBaseUrl().'" target="_blank\">'.$this->getEntity().'</a>'.
+		$footer = '© ' . \date('Y') . ' <a href="'.$this->getBaseUrl().'" target="_blank">'.$this->getEntity().'</a>'.
 			'<br/>' . $this->getSlogan();
 		if ($this->getImprintUrl() !== '') {
 			$footer .= '<span class="nowrap"> | <a href="' . $this->getImprintUrl() . '" target="_blank">' . $l10n->t('Imprint') . '</a></span>';
@@ -162,7 +130,7 @@ class OC_Theme {
 	 */
 	public function getLongFooter() {
 		$l10n = $this->getL10n();
-		$footer = '© 2020 <a href="'.$this->getBaseUrl().'" target="_blank\">'.$this->getEntity().'</a>'.
+		$footer = '© ' . \date('Y') . ' <a href="'.$this->getBaseUrl().'" target="_blank">'.$this->getEntity().'</a>'.
 			'<br/>' . $this->getSlogan();
 		if ($this->getImprintUrl() !== '') {
 			$footer .= '<span class="nowrap"> | <a href="' . $this->getImprintUrl() . '" target="_blank">' . $l10n->t('Imprint') . '</a></span>';
@@ -173,11 +141,6 @@ class OC_Theme {
 		}
 		return $footer;
 	}
-
-	public function buildDocLinkToKey($key) {
-		return $this->getDocBaseUrl() . '/server/10.0/go.php?to=' . $key;
-	}
-
 
 	/**
 	 * Returns mail header color
