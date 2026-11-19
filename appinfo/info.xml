@@ -7,7 +7,7 @@
 	<author>Lucas Bickel</author>
 	<version>1.0.0</version>
 	<types>
-		<theme />
+		<theme/>
 	</types>
 	<dependencies>
 		<owncloud min-version="11" max-version="11" />
